@@ -1,12 +1,73 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>My Book List & Reviews</title>
+  <title>Jack Usher - Personal Website</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Lora', serif;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+      line-height: 1.6;
+    }
+    .intro-section {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    .profile-image {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 20px;
+    }
+    .book-list {
+      list-style: none;
+      padding: 0;
+    }
+    .book-list li {
+      margin-bottom: 15px;
+    }
+    .book-list a {
+      color: #333;
+      text-decoration: underline;
+      text-decoration-color: #5b8cb7;
+      text-decoration-thickness: 1px;
+      font-size: 1.1em;
+      transition: text-decoration-thickness 0.2s ease;
+    }
+    .book-list a:hover {
+      text-decoration-thickness: 3px;
+    }
+    a {
+      color: #333;
+      text-decoration: underline;
+      text-decoration-color: #5b8cb7;
+      text-decoration-thickness: 1px;
+      transition: text-decoration-thickness 0.2s ease;
+    }
+    a:hover {
+      text-decoration-thickness: 3px;
+    }
+  </style>
 </head>
 <body>
-  <h1>My Book List & Reviews</h1>
-  <h2>The Bully Pulpit</h2>
-  <img src="Bully Pulpit book cover.png" alt="Cover of The Bully Pulpit Book" width="200">
-  <p>My thoughts: Great book, even though it was lengthy.</p>
+  <div class="intro-section">
+    <img src="profile pic.jpg" alt="Jack Usher" class="profile-image">
+    <h1>Jack Usher</h1>
+    <p>Hey, I'm Jack. I wanted to make this personal website old school-Internet style because LinkedIn / X / social media has too much noise. Sometimes, the old days were truly the good days (even though I wasn't even around for that era).</p>
+    <p>This site has a list of books I've read and my reviews of them, plus thoughts on any topics I find interesting.</p>
+    <p>This is also the place where I'll tell my own stories about my experiences, including my work experiences. Resumes and LinkedIn profiles are boring, plus everyone is "stretching the truth" to look better anyway. Go direct, as the great Lulu says.</p>
+    <p>Note: I started and am currently building this site almost entirely with Cursor AI / Claude. It is unbelievable how good these tools are. What can't we do?</p>
+  </div>
+
+  <h2>My Book List & Reviews</h2>
+  <ul class="book-list">
+    <li><a href="reviews/bully-pulpit.html"><strong><em>The Bully Pulpit</em></strong>, Doris Kearns Goodwin</a></li>
+    <!-- Add more books here as you read them -->
+  </ul>
 </body>
 </html>
