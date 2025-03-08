@@ -6,6 +6,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <style>
     body {
       font-family: 'Lato', sans-serif;
@@ -71,6 +72,70 @@
     }
     a:hover {
       text-decoration-thickness: 3px;
+    }
+    footer {
+      margin-top: 40px;
+      padding-top: 15px;
+      border-top: 1px solid #eee;
+      color: #888;
+      font-size: 0.9em;
+    }
+    .footer-content {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 30px;
+      margin-bottom: 15px;
+    }
+    .footer-section {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .footer-section h3 {
+      color: #666;
+      font-size: 0.9em;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin: 0;
+    }
+    .footer-section ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      gap: 15px;
+    }
+    .footer-section li {
+      margin: 0;
+    }
+    .footer-section a {
+      color: #888;
+      text-decoration: none;
+      transition: all 0.2s ease;
+      font-size: 0.9em;
+    }
+    .footer-section a:hover {
+      color: #5b8cb7;
+    }
+    .social-icons {
+      display: flex;
+      gap: 12px;
+    }
+    .social-icons a {
+      color: #888;
+      text-decoration: none;
+      transition: all 0.2s ease;
+    }
+    .social-icons a:hover {
+      color: #5b8cb7;
+      transform: translateY(-2px);
+    }
+    .copyright {
+      text-align: center;
+      font-size: 0.85em;
+      color: #aaa;
+      margin: 0;
     }
   </style>
 </head>
@@ -251,5 +316,43 @@
       So don't wait for permission. Just go for it.
     </p>
   </div>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>Sitemap</h3>
+        <ul>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="../books.html">Books</a></li>
+          <li><a href="../thoughts.html">Thoughts</a></li>
+          <li><a href="../contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Contact</h3>
+        <ul>
+          <li><a href="mailto:jack@jackusher.com">jack@jackusher.com</a></li>
+          <li><a href="../contact.html">Get in Touch</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Social</h3>
+        <div class="social-icons">
+          <a href="https://linkedin.com/in/jack-usher/" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-linkedin fa-lg"></i>
+          </a>
+          <a href="https://twitter.com/JackUsherr" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-x-twitter fa-lg"></i>
+          </a>
+          <a href="https://youtube.com/@jackusherr" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-youtube fa-lg"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="copyright">
+      © 2025 Jack Usher. All rights reserved.
+    </div>
+  </footer>
 </body>
 </html> 
