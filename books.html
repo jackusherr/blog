@@ -111,7 +111,73 @@
     a:hover {
       text-decoration-thickness: 3px;
     }
+    footer {
+      margin-top: 40px;
+      padding-top: 15px;
+      border-top: 1px solid #eee;
+      color: #888;
+      font-size: 0.9em;
+    }
+    .footer-content {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 30px;
+      margin-bottom: 15px;
+    }
+    .footer-section {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .footer-section h3 {
+      color: #666;
+      font-size: 0.9em;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin: 0;
+    }
+    .footer-section ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      gap: 15px;
+    }
+    .footer-section li {
+      margin: 0;
+    }
+    .footer-section a {
+      color: #888;
+      text-decoration: none;
+      transition: all 0.2s ease;
+      font-size: 0.9em;
+    }
+    .footer-section a:hover {
+      color: #5b8cb7;
+    }
+    .social-icons {
+      display: flex;
+      gap: 12px;
+    }
+    .social-icons a {
+      color: #888;
+      text-decoration: none;
+      transition: all 0.2s ease;
+    }
+    .social-icons a:hover {
+      color: #5b8cb7;
+      transform: translateY(-2px);
+    }
+    .copyright {
+      text-align: center;
+      font-size: 0.85em;
+      color: #aaa;
+      margin: 0;
+    }
   </style>
+  <!-- Add Font Awesome for social icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
   <nav>
@@ -229,7 +295,7 @@
           <div class="review-row"><strong>Rating:</strong> Not rated</div>
           <div class="review-row"><strong>Thoughts:</strong> No description available.</div>
         </div>
-        <img src="https://covers.openlibrary.org/b/id/8468172-L.jpg" alt="Cover of Destined for War: Can America and China Escape Thucydides’s Trap?" class="review-image">
+        <img src="https://covers.openlibrary.org/b/id/8468172-L.jpg" alt="Cover of Destined for War: Can America and China Escape Thucydides's Trap?" class="review-image">
       </div>
     </li>
 
@@ -455,7 +521,7 @@
         <div class="review-content">
           <div class="review-row"><strong>Date Read:</strong> 2021/09/10</div>
           <div class="review-row"><strong>Rating:</strong> Not rated</div>
-          <div class="review-row"><strong>Thoughts:</strong> Finished after long breaks. Great book, big fan of Malcom Gladwell’s writing style. The power of unconscious thought and decision-making.<br/></div>
+          <div class="review-row"><strong>Thoughts:</strong> Finished after long breaks. Great book, big fan of Malcom Gladwell's writing style. The power of unconscious thought and decision-making.<br/></div>
         </div>
         <img src="https://covers.openlibrary.org/b/id/6291252-L.jpg" alt="Cover of Blink" class="review-image">
       </div>
@@ -587,7 +653,7 @@
         <div class="review-content">
           <div class="review-row"><strong>Date Read:</strong> 2021/11/27</div>
           <div class="review-row"><strong>Rating:</strong> Not rated</div>
-          <div class="review-row"><strong>Thoughts:</strong> Great finish to the trilogy. More action-packed and dramatic than the previous. Salander, Blomkvist, Berger, and others are just as compelling in this story. I’d say it’s the best of the three. </div>
+          <div class="review-row"><strong>Thoughts:</strong> Great finish to the trilogy. More action-packed and dramatic than the previous. Salander, Blomkvist, Berger, and others are just as compelling in this story. I'd say it's the best of the three. </div>
         </div>
         <img src="https://covers.openlibrary.org/b/id/6389452-L.jpg" alt="Cover of The Girl Who Kicked the Hornet's Nest" class="review-image">
       </div>
@@ -671,7 +737,7 @@
         <div class="review-content">
           <div class="review-row"><strong>Date Read:</strong> 2021/09/05</div>
           <div class="review-row"><strong>Rating:</strong> Not rated</div>
-          <div class="review-row"><strong>Thoughts:</strong> Genetic technology allows dinosaurs to be recreated. Park is designed poorly and tons of things go wrong. Lots of casualties…main theme is man’s inability to control nature & delusion in thinking he can - personified by character of Ian Malcolm</div>
+          <div class="review-row"><strong>Thoughts:</strong> Genetic technology allows dinosaurs to be recreated. Park is designed poorly and tons of things go wrong. Lots of casualties…main theme is man's inability to control nature & delusion in thinking he can - personified by character of Ian Malcolm</div>
         </div>
         <img src="https://covers.openlibrary.org/b/id/8736907-L.jpg" alt="Cover of Jurassic Park" class="review-image">
       </div>
@@ -683,7 +749,7 @@
         <div class="review-content">
           <div class="review-row"><strong>Date Read:</strong> 2021/09/01</div>
           <div class="review-row"><strong>Rating:</strong> Not rated</div>
-          <div class="review-row"><strong>Thoughts:</strong> Blaser’s three pillars throughout the book:<br/><br/>1. The various bacteria and microorganisms that exist in and around the human species play a vital role in human health and well-being.<br/><br/>2. The blanket approach to prescribing antibiotics and increasing rates of procedures like the C-section are contributing to a growing public health crisis concerning antibiotic-resistant infections and diminished immunity and health amongst younger people. <br/><br/>3. The role of our microbiomes in our health is a growing field with many areas of research. These attempts include pinpointing what microorganisms are helpful (and harmful) to our health, how to restore microbiota in people who were previously deficient, and improving treatments and outcomes without traditional antibiotics.<br/><br/>Good read, but skipped a few chapters in the middle where he discusses his specific research on particular topics.</div>
+          <div class="review-row"><strong>Thoughts:</strong> Blaser's three pillars throughout the book:<br/><br/>1. The various bacteria and microorganisms that exist in and around the human species play a vital role in human health and well-being.<br/><br/>2. The blanket approach to prescribing antibiotics and increasing rates of procedures like the C-section are contributing to a growing public health crisis concerning antibiotic-resistant infections and diminished immunity and health amongst younger people. <br/><br/>3. The role of our microbiomes in our health is a growing field with many areas of research. These attempts include pinpointing what microorganisms are helpful (and harmful) to our health, how to restore microbiota in people who were previously deficient, and improving treatments and outcomes without traditional antibiotics.<br/><br/>Good read, but skipped a few chapters in the middle where he discusses his specific research on particular topics.</div>
         </div>
         <img src="https://covers.openlibrary.org/b/id/14845376-L.jpg" alt="Cover of Missing microbes" class="review-image">
       </div>
@@ -695,7 +761,7 @@
         <div class="review-content">
           <div class="review-row"><strong>Date Read:</strong> 2021/08/29</div>
           <div class="review-row"><strong>Rating:</strong> Not rated</div>
-          <div class="review-row"><strong>Thoughts:</strong> Great practical and insightful tips about connecting with others and celebrating the work we do every day. <br/><br/>1. You don’t have to be a genius - “Geniuses” are really just people who have poured themselves into their craft and been noticed for it.<br/><br/>2. Process, not product - speaks for itself. It’s the process that lasts.<br/><br/>3. Share something small every day<br/><br/>4. Open up your “cabinet of curiosities” - be your authentic self and show that to people. Don’t be someone you’re not.<br/><br/>5. Tell good stories - Way too much to write about this one. See Donald Miller’s book.<br/><br/>6. Teach what you know - a point of connection and a way to learn for yourself<br/><br/>7. Don’t turn into human spam - share but be self-aware.<br/><br/>8. Learn to take a punch - the more you are criticized, the more it doesn’t hurt, because it’s not personal.<br/><br/>9. Sell Out - don’t be afraid to monetize, duh.<br/><br/>10. Stick around - it’s not over until you quit. Seriously. </div>
+          <div class="review-row"><strong>Thoughts:</strong> Great practical and insightful tips about connecting with others and celebrating the work we do every day. <br/><br/>1. You don't have to be a genius - "Geniuses" are really just people who have poured themselves into their craft and been noticed for it.<br/><br/>2. Process, not product - speaks for itself. It's the process that lasts.<br/><br/>3. Share something small every day<br/><br/>4. Open up your "cabinet of curiosities" - be your authentic self and show that to people. Don't be someone you're not.<br/><br/>5. Tell good stories - Way too much to write about this one. See Donald Miller's book.<br/><br/>6. Teach what you know - a point of connection and a way to learn for yourself<br/><br/>7. Don't turn into human spam - share but be self-aware.<br/><br/>8. Learn to take a punch - the more you are criticized, the more it doesn't hurt, because it's not personal.<br/><br/>9. Sell Out - don't be afraid to monetize, duh.<br/><br/>10. Stick around - it's not over until you quit. Seriously. </div>
         </div>
         <img src="https://covers.openlibrary.org/b/id/7284188-L.jpg" alt="Cover of Show Your Work!" class="review-image">
       </div>
@@ -707,7 +773,7 @@
         <div class="review-content">
           <div class="review-row"><strong>Date Read:</strong> 2021/08/28</div>
           <div class="review-row"><strong>Rating:</strong> Not rated</div>
-          <div class="review-row"><strong>Thoughts:</strong> The power of good story. How we view our lives and why we should aspire to “live a good story.” There were strong Christian themes throughout, which were a pleasant surprise. <br/><br/>*God’s way of saying, “live a good story, bring someone along with you, and let me help.”</div>
+          <div class="review-row"><strong>Thoughts:</strong> The power of good story. How we view our lives and why we should aspire to "live a good story." There were strong Christian themes throughout, which were a pleasant surprise. <br/><br/>*God's way of saying, "live a good story, bring someone along with you, and let me help."</div>
         </div>
         <img src="https://covers.openlibrary.org/b/id/6287868-L.jpg" alt="Cover of A Million Miles in a Thousand Years" class="review-image">
       </div>
@@ -1416,5 +1482,43 @@
       review.classList.toggle('active');
     }
   </script>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>Sitemap</h3>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="books.html">Books</a></li>
+          <li><a href="thoughts.html">Thoughts</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Contact</h3>
+        <ul>
+          <li><a href="mailto:jack@jackusher.com">jack@jackusher.com</a></li>
+          <li><a href="contact.html">Get in Touch</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Social</h3>
+        <div class="social-icons">
+          <a href="https://linkedin.com/in/jack-usher/" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-linkedin fa-lg"></i>
+          </a>
+          <a href="https://twitter.com/JackUsherr" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-x-twitter fa-lg"></i>
+          </a>
+          <a href="https://youtube.com/@jackusherr" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-youtube fa-lg"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="copyright">
+      © 2025 Jack Usher. All rights reserved.
+    </div>
+  </footer>
 </body>
 </html> 
