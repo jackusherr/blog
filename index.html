@@ -147,6 +147,51 @@
       color: #aaa;
       margin: 0;
     }
+    /* Content Stack Styles */
+    .content-stack {
+      margin: 40px 0;
+    }
+    
+    .content-item {
+      display: flex;
+      align-items: start;
+      gap: 20px;
+      margin-bottom: 30px;
+      padding: 20px;
+      border-radius: 8px;
+      transition: all 0.2s ease;
+      border: 1px solid #eee;
+      text-decoration: none;
+      color: inherit;
+    }
+    
+    .content-item:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+      border-color: #5b8cb7;
+    }
+    
+    .content-image {
+      width: 120px;
+      height: 120px;
+      border-radius: 8px;
+      object-fit: cover;
+    }
+    
+    .content-details {
+      flex: 1;
+    }
+    
+    .content-details h3 {
+      margin: 0 0 10px 0;
+      color: #333;
+    }
+    
+    .content-details p {
+      margin: 0;
+      color: #666;
+      line-height: 1.6;
+    }
   </style>
   <!-- Add Font Awesome for social icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
@@ -168,6 +213,43 @@
     <p>This site has a list of books I've read and my reviews of them, plus thoughts on any topics I find interesting.</p>
     <p>This is also the place where I'll tell my own stories about my experiences, including my work experiences. Resumes and LinkedIn profiles are boring, plus everyone is "stretching the truth" to look better anyway. Go direct, as the great Lulu says.</p>
     <p><em>Note: I started and am currently building this site almost entirely with <a href="https://cursor.sh" target="_blank" rel="noopener noreferrer">Cursor AI</a> / Claude. It is unbelievable how good these tools are.</em></p>
+  </div>
+
+  <div class="favorite-podcasts">
+    <h2>Favorite Podcasts</h2>
+    <p>I am an ardent believer in podcasts as a medium and believe it's still an underappreciated asset. My current podcast listening rotation:</p>
+    
+    <a href="https://allin.com/episodes" target="_blank" rel="noopener noreferrer" class="content-item">
+      <img src="images/all-in-podcast.jpg" alt="All In Podcast" class="content-image">
+      <div class="content-details">
+        <h3>All In Podcast</h3>
+        <p>This podcast is one of my favorites because the hosts are guys who have actually built companies and have interesting stories and perspectives to share. None of them are "podcasters" as a full time job (except JCal, maybe - not a knock, I'm a fan of his!) Listener since March 2023.</p>
+      </div>
+    </a>
+
+    <a href="https://www.mfmpod.com/" target="_blank" rel="noopener noreferrer" class="content-item">
+      <img src="images/my-first-million.jpg" alt="My First Million" class="content-image">
+      <div class="content-details">
+        <h3>My First Million</h3>
+        <p>I think I've learned more from this podcast than I learned in school. Sam and Shaan are terrific storytellers, great senses of humor, interesting guests, and introduced me to worlds of business and entrepreneurship I never even knew existed. Listener since 2021.</p>
+      </div>
+    </a>
+
+    <a href="https://www.acquired.fm/" target="_blank" rel="noopener noreferrer" class="content-item">
+      <img src="images/acquired.jpg" alt="Acquired" class="content-image">
+      <div class="content-details">
+        <h3>Acquired</h3>
+        <p>I discovered this show in 2023. It is so high-quality, well-researched, and well-produced. The episodes are timeless too. Their content will be just as relevant 10 years from now. If you want a deep dive into a big company, this is THE show for you.</p>
+      </div>
+    </a>
+
+    <a href="https://www.youtube.com/@joerogan/videos" target="_blank" rel="noopener noreferrer" class="content-item">
+      <img src="images/joe-rogan.jpg" alt="The Joe Rogan Experience" class="content-image">
+      <div class="content-details">
+        <h3>The Joe Rogan Experience</h3>
+        <p>Of course, no podcast enthusiast can say they aren't fans of Joe Rogan, or at least, don't immensely respect him. JRE is a masterclass in authentic personal branding. He led the way as one of the OG podcasters, and is now one of the most influential people in America. I listen whenever he has a guest I find interesting.</p>
+      </div>
+    </a>
   </div>
 
   <footer>
