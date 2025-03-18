@@ -13,6 +13,13 @@
       margin: 0 auto;
       padding: 20px;
       line-height: 1.6;
+      background-color: #ffffff;
+      color: #333;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+    body.dark-mode {
+      background-color: #1a1a1a;
+      color: #e0e0e0;
     }
     nav {
       margin-bottom: 40px;
@@ -21,6 +28,9 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
+    }
+    body.dark-mode nav {
+      border-bottom: 1px solid #333;
     }
     .logo {
       height: 40px;
@@ -32,6 +42,7 @@
       list-style: none;
       padding: 0;
       margin: 0;
+      align-items: center;
     }
     .nav-links a {
       color: #333;
@@ -39,8 +50,34 @@
       font-size: 1.1em;
       transition: transform 0.2s ease;
     }
+    body.dark-mode .nav-links a {
+      color: #e0e0e0;
+    }
     .nav-links a:hover {
       transform: translateY(-2px);
+      color: #5b8cb7;
+    }
+    body.dark-mode .nav-links a:hover {
+      color: #7ab8e6;
+    }
+    .theme-toggle {
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 8px;
+      font-size: 1.2em;
+      color: #333;
+      transition: all 0.2s ease;
+    }
+    body.dark-mode .theme-toggle {
+      color: #e0e0e0;
+    }
+    .theme-toggle:hover {
+      transform: translateY(-2px);
+      color: #5b8cb7;
+    }
+    body.dark-mode .theme-toggle:hover {
+      color: #7ab8e6;
     }
     .thought-content {
       max-width: 700px;
@@ -56,8 +93,9 @@
       text-decoration-thickness: 1px;
       transition: text-decoration-thickness 0.2s ease;
     }
-    a:hover {
-      text-decoration-thickness: 3px;
+    body.dark-mode a {
+      color: #e0e0e0;
+      text-decoration-color: #7ab8e6;
     }
     footer {
       margin-top: 40px;
@@ -65,6 +103,9 @@
       border-top: 1px solid #eee;
       color: #888;
       font-size: 0.9em;
+    }
+    body.dark-mode footer {
+      border-top: 1px solid #333;
     }
     .footer-content {
       display: flex;
@@ -85,6 +126,9 @@
       letter-spacing: 0.5px;
       margin: 0;
     }
+    body.dark-mode .footer-section h3 {
+      color: #999;
+    }
     .footer-section ul {
       list-style: none;
       padding: 0;
@@ -104,6 +148,9 @@
     .footer-section a:hover {
       color: #5b8cb7;
     }
+    body.dark-mode .footer-section a:hover {
+      color: #7ab8e6;
+    }
     .social-icons {
       display: flex;
       gap: 12px;
@@ -117,15 +164,44 @@
       color: #5b8cb7;
       transform: translateY(-2px);
     }
+    body.dark-mode .social-icons a:hover {
+      color: #7ab8e6;
+    }
     .copyright {
       text-align: center;
       font-size: 0.85em;
       color: #aaa;
       margin: 0;
     }
+    body.dark-mode .copyright {
+      color: #666;
+    }
   </style>
   <!-- Add Font Awesome for social icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <script>
+    // Immediately apply theme before page renders
+    (function() {
+      const theme = localStorage.getItem('theme') || 
+        (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+      if (theme === 'dark') document.documentElement.classList.add('dark-mode');
+    })();
+
+    // Theme toggle function
+    function toggleTheme() {
+      document.body.classList.toggle('dark-mode');
+      const isDarkMode = document.body.classList.contains('dark-mode');
+      localStorage.setItem('theme', isDarkMode ? 'dark' : 'light');
+      
+      // Update theme icon
+      const themeIcon = document.querySelector('.theme-toggle i');
+      themeIcon.className = isDarkMode ? 'fas fa-sun' : 'fas fa-moon';
+    }
+
+    // Update theme icon on page load
+    const themeIcon = document.querySelector('.theme-toggle i');
+    themeIcon.className = localStorage.getItem('theme') === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
+  </script>
 </head>
 <body>
   <nav>
@@ -134,6 +210,11 @@
       <li><a href="../books.html">Books</a></li>
       <li><a href="../thoughts.html">Thoughts</a></li>
       <li><a href="../contact.html">Contact</a></li>
+      <li>
+        <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme">
+          <i class="fas fa-moon"></i>
+        </button>
+      </li>
     </ul>
   </nav>
 

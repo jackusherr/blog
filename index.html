@@ -2,6 +2,14 @@
 <html>
 <head>
   <title>Jack Usher - Personal Website</title>
+  <script>
+    // Immediately apply theme before page renders
+    (function() {
+      const theme = localStorage.getItem('theme') || 
+        (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+      if (theme === 'dark') document.documentElement.classList.add('dark-mode');
+    })();
+  </script>
   <link rel="icon" type="image/jpeg" href="JU blue.jpg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,36 +21,14 @@
       margin: 0 auto;
       padding: 20px;
       line-height: 1.6;
-    }
-    nav {
-      margin-bottom: 40px;
-      border-bottom: 1px solid #eee;
-      padding-bottom: 10px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-    .logo {
-      height: 40px;
-      width: auto;
-    }
-    .nav-links {
-      display: flex;
-      gap: 30px;
-      list-style: none;
-      padding: 0;
-      margin: 0;
-    }
-    .nav-links a {
+      background-color: #ffffff;
       color: #333;
-      text-decoration: none;
-      font-size: 1.1em;
-      transition: all 0.2s ease;
-      display: inline-block;
+      transition: background-color 0.3s ease, color 0.3s ease;
     }
-    .nav-links a:hover {
-      transform: translateY(-2px);
-      color: #5b8cb7;
+    html.dark-mode body,
+    body.dark-mode {
+      background-color: #1a1a1a;
+      color: #e0e0e0;
     }
     .intro-section {
       text-align: center;
@@ -70,18 +56,15 @@
       font-size: 1.1em;
       transition: text-decoration-thickness 0.2s ease;
     }
-    .book-list a:hover {
-      text-decoration-thickness: 3px;
+    html.dark-mode .book-list a,
+    body.dark-mode .book-list a {
+      color: #e0e0e0;
+      text-decoration-color: #7ab8e6;
     }
-    a {
-      color: #333;
-      text-decoration: underline;
-      text-decoration-color: #5b8cb7;
-      text-decoration-thickness: 1px;
-      transition: text-decoration-thickness 0.2s ease;
-    }
-    a:hover {
-      text-decoration-thickness: 3px;
+    html.dark-mode a,
+    body.dark-mode a {
+      color: #e0e0e0;
+      text-decoration-color: #7ab8e6;
     }
     footer {
       margin-top: 40px;
@@ -89,6 +72,10 @@
       border-top: 1px solid #eee;
       color: #888;
       font-size: 0.9em;
+    }
+    html.dark-mode footer,
+    body.dark-mode footer {
+      border-top: 1px solid #333;
     }
     .footer-content {
       display: flex;
@@ -109,6 +96,10 @@
       letter-spacing: 0.5px;
       margin: 0;
     }
+    html.dark-mode .footer-section h3,
+    body.dark-mode .footer-section h3 {
+      color: #999;
+    }
     .footer-section ul {
       list-style: none;
       padding: 0;
@@ -128,6 +119,10 @@
     .footer-section a:hover {
       color: #5b8cb7;
     }
+    html.dark-mode .footer-section a:hover,
+    body.dark-mode .footer-section a:hover {
+      color: #7ab8e6;
+    }
     .social-icons {
       display: flex;
       gap: 12px;
@@ -141,11 +136,19 @@
       color: #5b8cb7;
       transform: translateY(-2px);
     }
+    html.dark-mode .social-icons a:hover,
+    body.dark-mode .social-icons a:hover {
+      color: #7ab8e6;
+    }
     .copyright {
       text-align: center;
       font-size: 0.85em;
       color: #aaa;
       margin: 0;
+    }
+    html.dark-mode .copyright,
+    body.dark-mode .copyright {
+      color: #666;
     }
     /* Content Stack Styles */
     .content-stack {
@@ -163,12 +166,25 @@
       border: 1px solid #eee;
       text-decoration: none;
       color: inherit;
+      background-color: #ffffff;
+    }
+    
+    html.dark-mode .content-item,
+    body.dark-mode .content-item {
+      border: 1px solid #333;
+      background-color: #242424;
     }
     
     .content-item:hover {
       transform: translateY(-2px);
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
       border-color: #5b8cb7;
+    }
+    
+    html.dark-mode .content-item:hover,
+    body.dark-mode .content-item:hover {
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+      border-color: #7ab8e6;
     }
     
     .content-image {
@@ -187,28 +203,28 @@
       color: #333;
     }
     
+    html.dark-mode .content-details h3,
+    body.dark-mode .content-details h3 {
+      color: #e0e0e0;
+    }
+    
     .content-details p {
       margin: 0;
       color: #666;
       line-height: 1.6;
+    }
+    
+    html.dark-mode .content-details p,
+    body.dark-mode .content-details p {
+      color: #b0b0b0;
     }
   </style>
   <!-- Add Font Awesome for social icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
-  <nav>
-    <a href="index.html"><img src="JU blue.jpg" alt="JU" class="logo"></a>
-    <ul class="nav-links">
-      <li><a href="books.html">Books</a></li>
-      <li><a href="thoughts.html">Thoughts</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-  </nav>
-
   <div class="intro-section">
     <img src="profile pic.JPG" alt="Jack Usher" class="profile-image">
-    <h1>Jack Usher</h1>
     <p>Hey, I'm Jack. I wanted to make this personal website old school-Internet style because LinkedIn / X / social media has too much noise. Sometimes, the old days were truly the good days (even though I wasn't even around for that era).</p>
     <p>This site has a list of books I've read and my reviews of them, plus thoughts on any topics I find interesting.</p>
     <p>This is also the place where I'll tell my own stories about my experiences, including my work experiences. Resumes and LinkedIn profiles are boring, plus everyone is "stretching the truth" to look better anyway.</p>
@@ -290,5 +306,7 @@
       © 2025 Jack Usher. All rights reserved.
     </div>
   </footer>
+  <!-- Add shared navigation -->
+  <script src="nav.js"></script>
 </body>
 </html>

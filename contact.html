@@ -2,6 +2,14 @@
 <html>
 <head>
   <title>Contact - Jack Usher</title>
+  <script>
+    // Immediately apply theme before page renders
+    (function() {
+      const theme = localStorage.getItem('theme') || 
+        (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+      if (theme === 'dark') document.documentElement.classList.add('dark-mode');
+    })();
+  </script>
   <link rel="icon" type="image/jpeg" href="JU blue.jpg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,36 +21,13 @@
       margin: 0 auto;
       padding: 20px;
       line-height: 1.6;
-    }
-    nav {
-      margin-bottom: 40px;
-      border-bottom: 1px solid #eee;
-      padding-bottom: 10px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-    .logo {
-      height: 40px;
-      width: auto;
-    }
-    .nav-links {
-      display: flex;
-      gap: 30px;
-      list-style: none;
-      padding: 0;
-      margin: 0;
-    }
-    .nav-links a {
+      background-color: #ffffff;
       color: #333;
-      text-decoration: none;
-      font-size: 1.1em;
-      transition: all 0.2s ease;
-      display: inline-block;
+      transition: background-color 0.3s ease, color 0.3s ease;
     }
-    .nav-links a:hover {
-      transform: translateY(-2px);
-      color: #5b8cb7;
+    body.dark-mode {
+      background-color: #1a1a1a;
+      color: #e0e0e0;
     }
     .contact-section {
       max-width: 600px;
@@ -61,6 +46,10 @@
       text-decoration-thickness: 1px;
       transition: text-decoration-thickness 0.2s ease;
     }
+    body.dark-mode a {
+      color: #e0e0e0;
+      text-decoration-color: #7ab8e6;
+    }
     a:hover {
       text-decoration-thickness: 3px;
     }
@@ -70,6 +59,9 @@
       border-top: 1px solid #eee;
       color: #888;
       font-size: 0.9em;
+    }
+    body.dark-mode footer {
+      border-top: 1px solid #333;
     }
     .footer-content {
       display: flex;
@@ -90,6 +82,9 @@
       letter-spacing: 0.5px;
       margin: 0;
     }
+    body.dark-mode .footer-section h3 {
+      color: #999;
+    }
     .footer-section ul {
       list-style: none;
       padding: 0;
@@ -109,6 +104,9 @@
     .footer-section a:hover {
       color: #5b8cb7;
     }
+    body.dark-mode .footer-section a:hover {
+      color: #7ab8e6;
+    }
     .social-icons {
       display: flex;
       gap: 12px;
@@ -122,30 +120,27 @@
       color: #5b8cb7;
       transform: translateY(-2px);
     }
+    body.dark-mode .social-icons a:hover {
+      color: #7ab8e6;
+    }
     .copyright {
       text-align: center;
       font-size: 0.85em;
       color: #aaa;
       margin: 0;
     }
+    body.dark-mode .copyright {
+      color: #666;
+    }
   </style>
   <!-- Add Font Awesome for social icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
-  <nav>
-    <a href="index.html"><img src="JU blue.jpg" alt="JU" class="logo"></a>
-    <ul class="nav-links">
-      <li><a href="books.html">Books</a></li>
-      <li><a href="thoughts.html">Thoughts</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-  </nav>
-
   <div class="contact-section">
     <h1>Get in Touch</h1>
     <p>I spend too much time on my phone like everyone else, so you can contact me easily.</p>
-    <p>Email is best, but sadly, duty calls for me to be on LinkedIn as well. You can do either:</p>
+    <p>Email is best. Sadly, duty calls for me to be on LinkedIn as well, so you can find me there, too. </p>
 
     <div class="contact-item">
       <h3>Email</h3>
@@ -195,5 +190,7 @@
       © 2025 Jack Usher. All rights reserved.
     </div>
   </footer>
+  <!-- Add shared navigation -->
+  <script src="nav.js"></script>
 </body>
 </html> 
